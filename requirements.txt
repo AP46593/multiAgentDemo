@@ -1,0 +1,29 @@
+
+#requirements.txt
+# check readMe.md for more details regarding system dependencies and required installation.
+
+# ─── core LLM / agent stack ───────────────────────────────────────────
+langchain>=0.1.14
+langgraph>=0.0.38          # state‑machine wrapper for LangChain
+langchain-ollama>=0.0.5    # LangChain -> Ollama adapter
+
+# ─── front‑end UI ────────────────────────────────────────────────────
+gradio>=4.9                 # 4.x series, works without ChatInput
+
+# ─── OCR options ─────────────────────────────────────────────────────
+easyocr>=1.7.1              # light‑weight text detector
+opencv-python-headless>=4.9 # pre‑processing (headless variant saves size)
+
+# ─── image handling ──────────────────────────────────────────────────
+pillow>=10.0
+
+# ─── graph visualisation ─────────────────────────────────────────────
+graphviz>=0.20.1            # *python* bindings (needs system Graphviz below)
+
+# ─── misc utilities ─────────────────────────────────────────────────
+pydantic>=2.6               # schemas
+requests>=2.31              # DVLA API call (live lookup)
+
+# (optional) load .env secrets, structured logging, etc.
+python-dotenv>=1.0
+
